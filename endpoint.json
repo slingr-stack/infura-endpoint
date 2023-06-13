@@ -1,0 +1,91 @@
+{
+    "label": "Infura",
+    "name": "infura",
+    "apiVersion": "v1",
+    "internal": false,
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "type": "java11",
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 256,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": true
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/infura.png",
+    "configurationHelpUrl": "/endpoints-infura.html#configuration",
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [
+        {
+            "label": "Webhook",
+            "name": "webhook",
+            "description": "Event triggered when there is a webhook coming from Infura."
+        },
+        {
+            "label": "Callback",
+            "name": "callback",
+            "description": "Happens when a async process is finished"
+        }
+    ],
+    "functions": [
+        {
+            "label": "GET",
+            "name": "_get",
+            "description": "Sends a GET request"
+        },
+        {
+            "label": "POST",
+            "name": "_post",
+            "description": "Sends a POST request"
+        },
+        {
+            "label": "PUT",
+            "name": "_put",
+            "description": "Sends a PUT request"
+        },
+        {
+            "label": "PATCH",
+            "name": "_patch",
+            "description": "Sends a PATCH request"
+        },
+        {
+            "label": "DELETE",
+            "name": "_delete",
+            "description": "Sends a DELETE request"
+        },
+        {
+            "label": "HEAD",
+            "name": "_head",
+            "description": "Sends a HEAD request"
+        },
+        {
+            "label": "OPTIONS",
+            "name": "_options",
+            "description": "Sends a OPTIONS request"
+        }
+    ],
+    "scripts":[
+        "functions.js"
+    ],
+    "flowSteps": [
+        "apiCallInfura"
+    ],
+    "configuration":[
+        {
+            "name": "apiKey",
+            "label": "API Key",
+            "type": "text"
+        },
+        {
+            "name": "webhook",
+            "label": "Webhook URL",
+            "type": "label",
+            "value": "config.WEBHOOK_URL"
+        }
+    ]
+}

@@ -1,0 +1,252 @@
+{
+  "fileName": "functions",
+  "apiDescriptors": [
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_accounts/:id"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_blockNumber/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_call/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_chainId/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_createAccessList/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_estimateGas/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_feeHistory/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getBalance/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_gasPrice/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getBlockByHash/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getBlockByNumber/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getBlockTransactionCountByHash/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getBlockTransactionCountByNumber/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getCode/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getLogs/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getStorageAt/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getTransactionByBlockHashAndIndex/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getTransactionByBlockNumberAndIndex/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getTransactionByHash/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getTransactionCount/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getTransactionReceipt/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getUncleByBlockHashAndIndex/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getUncleByBlockNumberAndIndex/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getUncleCountByBlockHash/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getUncleCountByBlockNumber/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getWork/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_mining/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_hashrate/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_protocolVersion/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_sendRawTransaction/:project-id/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_submitWork/:project-id/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_syncing/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getFilterChanges/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_getFilterLogs/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_newFilter/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_newBlockFilter/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/eth_uninstallFilter/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/net_listening/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/net_peerCount/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/net_version/:id/:params"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "url": "/web3_clientVersion/:id/:params"
+    }
+  ],
+  "endpointName": "infura"
+}
