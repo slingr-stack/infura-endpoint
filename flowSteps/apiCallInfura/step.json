@@ -5,8 +5,8 @@
   "description": "This flow step will send generic request to infura",
   "inputs": [
     {
-      "label": "Url",
-      "name": "url",
+      "label": "Method",
+      "name": "method",
       "description": "The method and path to which this endpoint is to send requests in a generic way.",
       "type": "urlParams",
       "required": "true",
@@ -14,148 +14,140 @@
         "type": "dropDown",
         "possibleValues": [
             {
-              "label": "POST /eth_accounts/{id}"
+              "label": "eth_accounts"
             },
             {
-              "label": "POST /eth_blockNumber/{id}/{params}"
+              "label": "eth_blockNumber"
             },
             {
-              "label": "POST /eth_call/{id}/{params}"
+              "label": "eth_call"
             },
             {
-              "label": "POST /eth_chainId/{id}/{params}"
+              "label": "eth_chainId"
             },
             {
-              "label": "POST /eth_createAccessList/{id}/{params}"
+              "label": "eth_createAccessList"
             },
             {
-              "label": "POST /eth_estimateGas/{id}/{params}"
+              "label": "eth_estimateGas"
             },
             {
-              "label": "POST /eth_feeHistory/{id}/{params}"
+              "label": "eth_feeHistory"
             },
             {
-              "label": "POST /eth_getBalance/{id}/{params}"
+              "label": "eth_getBalance"
             },
             {
-              "label": "POST /eth_gasPrice/{id}/{params}"
+              "label": "eth_gasPrice"
             },
             {
-              "label": "POST /eth_getBlockByHash/{id}/{params}"
+              "label": "eth_getBlockByHash"
             },
             {
-              "label": "POST /eth_getBlockByNumber/{id}/{params}"
+              "label": "eth_getBlockByNumber"
             },
             {
-              "label": "POST /eth_getBlockTransactionCountByHash/{id}/{params}"
+              "label": "eth_getBlockTransactionCountByHash"
             },
             {
-              "label": "POST /eth_getBlockTransactionCountByNumber/{id}/{params}"
+              "label": "eth_getBlockTransactionCountByNumber"
             },
             {
-              "label": "POST /eth_getCode/{id}/{params}"
+              "label": "eth_getCode"
             },
             {
-              "label": "POST /eth_getLogs/{id}/{params}"
+              "label": "eth_getLogs"
             },
             {
-              "label": "POST /eth_getStorageAt/{id}/{params}"
+              "label": "eth_getStorageAt"
             },
             {
-              "label": "POST /eth_getTransactionByBlockHashAndIndex/{id}/{params}"
+              "label": "eth_getTransactionByBlockHashAndIndex"
             },
             {
-              "label": "POST /eth_getTransactionByBlockNumberAndIndex/{id}/{params}"
+              "label": "eth_getTransactionByBlockNumberAndIndex"
             },
             {
-              "label": "POST /eth_getTransactionByHash/{id}/{params}"
+              "label": "eth_getTransactionByHash"
             },
             {
-              "label": "POST /eth_getTransactionCount/{id}/{params}"
+              "label": "eth_getTransactionCount"
             },
             {
-              "label": "POST /eth_getTransactionReceipt/{id}/{params}"
+              "label": "eth_getTransactionReceipt"
             },
             {
-              "label": "POST /eth_getUncleByBlockHashAndIndex/{id}/{params}"
+              "label": "eth_getUncleByBlockHashAndIndex"
             },
             {
-              "label": "POST /eth_getUncleByBlockNumberAndIndex/{id}/{params}"
+              "label": "eth_getUncleByBlockNumberAndIndex"
             },
             {
-              "label": "POST /eth_getUncleCountByBlockHash/{id}/{params}"
+              "label": "eth_getUncleCountByBlockHash"
             },
             {
-              "label": "POST /eth_getUncleCountByBlockNumber/{id}/{params}"
+              "label": "eth_getUncleCountByBlockNumber"
             },
             {
-              "label": "POST /eth_getWork/{id}/{params}"
+              "label": "eth_getWork"
             },
             {
-              "label": "POST /eth_mining/{id}/{params}"
+              "label": "eth_mining"
             },
             {
-              "label": "POST /eth_hashrate/{id}/{params}"
+              "label": "eth_hashrate"
             },
             {
-              "label": "POST /eth_protocolVersion/{id}/{params}"
+              "label": "eth_protocolVersion"
             },
             {
-              "label": "POST /eth_sendRawTransaction/{project-id}/{id}/{params}"
+              "label": "eth_syncing"
             },
             {
-              "label": "POST /eth_submitWork/{project-id}/{id}/{params}"
+              "label": "eth_getFilterChanges"
             },
             {
-              "label": "POST /eth_syncing/{id}/{params}"
+              "label": "eth_getFilterLogs"
             },
             {
-              "label": "POST /eth_getFilterChanges/{id}/{params}"
+              "label": "eth_newFilter"
             },
             {
-              "label": "POST /eth_getFilterLogs/{id}/{params}"
+              "label": "eth_newBlockFilter"
             },
             {
-              "label": "POST /eth_newFilter/{id}/{params}"
+              "label": "eth_uninstallFilter"
             },
             {
-              "label": "POST /eth_newBlockFilter/{id}/{params}"
+              "label": "net_listening"
             },
             {
-              "label": "POST /eth_uninstallFilter/{id}/{params}"
+              "label": "net_listening"
             },
             {
-              "label": "POST /net_listening/{id}/{params}"
+              "label": "net_peerCount"
             },
             {
-              "label": "POST /net_listening/net_peerCount/{id}/{params}"
+              "label": "net_version"
             },
             {
-              "label": "POST /net_version/{id}/{params}"
-            },
-            {
-              "label": "POST /web3_clientVersion/{id}/{params}"
+              "label": "web3_clientVersion"
             }
         ]
       }
     },
     {
-      "label": "Headers",
-      "name": "headers",
-      "description": "Let the client and the server pass additional information with the HTTP request in a key value format. (e.g. key=ABC123)",
-      "type": "keyValue"
+      "label": "Id",
+      "name": "id",
+      "description": "",
+      "type": "text"
     },
     {
-      "label": "Query Params",
+      "label": "Params",
       "name": "params",
-      "description": "Parameters attached to the end of a url in a key value format. (e.g. key=ABC123)",
-      "type": "keyValue"
-    },
-    {
-      "label": "Body",
-      "name": "body",
       "type": "json",
-      "description": "Content to be sent to the server.",
+      "description": "",
+      "required": "true",
       "options": {
         "allowContextSelector": "true"
       }

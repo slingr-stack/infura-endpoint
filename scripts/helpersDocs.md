@@ -197,18 +197,6 @@ app.endpoints.infura.ethHashrate.post(id, params)
 app.endpoints.infura.ethProtocolVersion.post(id, params)
 ```
 ---
-* API: 'eth_sendRawTransaction/:project-id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.infura.ethSendRawTransaction.post(projectId, id, params)
-```
----
-* API: 'eth_submitWork/:project-id'
-* HTTP Method: 'POST'
-```javascript
-app.endpoints.infura.ethSubmitWork.post(projectId, id, params)
-```
----
 * API: 'eth_syncing'
 * HTTP Method: 'POST'
 ```javascript

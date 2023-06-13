@@ -66,10 +66,6 @@ endpoint.ethHashrate = {};
 
 endpoint.ethProtocolVersion = {};
 
-endpoint.ethSendRawTransaction = {};
-
-endpoint.ethSubmitWork = {};
-
 endpoint.ethSyncing = {};
 
 endpoint.ethGetFilterChanges = {};
@@ -235,26 +231,6 @@ endpoint.ethHashrate.post = function(id, params, httpOptions) {
 endpoint.ethProtocolVersion.post = function(id, params, httpOptions) {
     var method = 'eth_protocolVersion';
     return createRequest(method, id, params, httpOptions)
-};
-
-endpoint.ethSendRawTransaction.post = function(projectId, id, params, httpOptions) {
-    if (!projectId) {
-        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [projectId].');
-        return;
-    }
-    var method = 'ethSendRawTransaction';
-    var url = parse('/:project-id', [projectId]);
-    return createRequest(method, id, params, checkHttpOptions(url, httpOptions))
-};
-
-endpoint.ethSubmitWork.post = function(projectId, id, params, httpOptions) {
-    if (!projectId) {
-        sys.logs.error('Invalid argument received. This helper should receive the following parameters as non-empty strings: [projectId].');
-        return;
-    }
-    var method = 'ethSubmitWork';
-    var url = parse('/:project-id', [projectId]);
-    return createRequest(method, id, params, checkHttpOptions(url, httpOptions))
 };
 
 endpoint.ethSyncing.post = function(id, params, httpOptions) {
