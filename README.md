@@ -1,3 +1,22 @@
+---
+title: Infura endpoint
+keywords: 
+last_updated: Jun 14, 2023
+tags: []
+summary: "Detailed description of the API of the Infura endpoint."
+---
+
+## Overview
+
+The Infura endpoint has the following features:
+
+- Authorization and generation of ApiKey tokens
+- Access to the whole REST API
+
+Please make sure you take a look at the documentation from Infura as features are based on its API:
+
+- [API Reference](https://docs.infura.io/networks/ethereum/json-rpc-methods)
+
 # Javascript API
 
 The Javascript API of the infura endpoint has three pieces:
@@ -7,7 +26,7 @@ The Javascript API of the infura endpoint has three pieces:
 - **Additional Helpers**: These helpers provide additional features that facilitate or improves the endpoint usage in SLINGR.
 
 ## HTTP requests
-You can make `POST` requests to the [infura API](API_URL_HERE) like this:
+You can make `POST` requests to the [infura API](https://docs.infura.io/networks/ethereum/json-rpc-methods) like this:
 ```javascript
 var response = app.endpoints.infura.post(body)
 ```

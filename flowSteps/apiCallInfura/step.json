@@ -139,14 +139,14 @@
     {
       "label": "Id",
       "name": "id",
-      "description": "",
+      "description": "Id",
       "type": "text"
     },
     {
       "label": "Params",
       "name": "params",
       "type": "json",
-      "description": "",
+      "description": "Params",
       "required": "true",
       "options": {
         "allowContextSelector": "true"

@@ -296,57 +296,34 @@ Generic flow step for full use of the entire endpoint and its services.
     </thead>
     <tbody>
     <tr>
-        <td>URL (Method)</td>
+        <td>Method</td>
         <td>choice</td>
         <td>yes</td>
         <td> - </td>
         <td>Always</td>
         <td>
-            This is the http method to be used against the endpoint. <br>
             Possible values are: <br>
-            <i><strong>POST</strong></i>
+            <i><strong>eth_accounts<br>eth_blockNumber<br>eth_call<br>eth_chainId<br>eth_createAccessList<br>eth_estimateGas<br>eth_feeHistory<br>eth_getBalance<br>eth_gasPrice<br>eth_getBlockByHash<br>eth_getBlockByNumber<br>eth_getBlockTransactionCountByHash<br>eth_getBlockTransactionCountByNumber<br>eth_getCode<br>eth_getLogs<br>eth_getStorageAt<br>eth_getTransactionByBlockHashAndIndex<br>eth_getTransactionByBlockNumberAndIndex<br>eth_getTransactionByHash<br>eth_getTransactionCount<br>eth_getTransactionReceipt<br>eth_getUncleByBlockHashAndIndex<br>eth_getUncleByBlockNumberAndIndex<br>eth_getUncleCountByBlockHash<br>eth_getUncleCountByBlockNumber<br>eth_getWork<br>eth_mining<br>eth_hashrate<br>eth_protocolVersion<br>eth_sendRawTransaction/{project-id}<br>eth_submitWork/{project-id}<br>eth_syncing<br>eth_getFilterChanges<br>eth_getFilterLogs<br>eth_newFilter<br>eth_newBlockFilter<br>eth_uninstallFilter<br>/net_listening<br>/net_listening/net_peerCount<br>/net_version<br>/web3_clientVersion<br></strong></i>
         </td>
     </tr>
     <tr>
-        <td>URL (Path)</td>
-        <td>choice</td>
-        <td>yes</td>
-        <td> - </td>
-        <td>Always</td>
-        <td>
-            The url to which this endpoint will send the request. This is the exact service to which the http request will be made. <br>
-            Possible values are: <br>
-            <i><strong>/eth_accounts/{id}<br>/eth_blockNumber/{id}/{params}<br>/eth_call/{id}/{params}<br>/eth_chainId/{id}/{params}<br>/eth_createAccessList/{id}/{params}<br>/eth_estimateGas/{id}/{params}<br>/eth_feeHistory/{id}/{params}<br>/eth_getBalance/{id}/{params}<br>/eth_gasPrice/{id}/{params}<br>/eth_getBlockByHash/{id}/{params}<br>/eth_getBlockByNumber/{id}/{params}<br>/eth_getBlockTransactionCountByHash/{id}/{params}<br>/eth_getBlockTransactionCountByNumber/{id}/{params}<br>/eth_getCode/{id}/{params}<br>/eth_getLogs/{id}/{params}<br>/eth_getStorageAt/{id}/{params}<br>/eth_getTransactionByBlockHashAndIndex/{id}/{params}<br>/eth_getTransactionByBlockNumberAndIndex/{id}/{params}<br>/eth_getTransactionByHash/{id}/{params}<br>/eth_getTransactionCount/{id}/{params}<br>/eth_getTransactionReceipt/{id}/{params}<br>/eth_getUncleByBlockHashAndIndex/{id}/{params}<br>/eth_getUncleByBlockNumberAndIndex/{id}/{params}<br>/eth_getUncleCountByBlockHash/{id}/{params}<br>/eth_getUncleCountByBlockNumber/{id}/{params}<br>/eth_getWork/{id}/{params}<br>/eth_mining/{id}/{params}<br>/eth_hashrate/{id}/{params}<br>/eth_protocolVersion/{id}/{params}<br>/eth_sendRawTransaction/{project-id}/{id}/{params}<br>/eth_submitWork/{project-id}/{id}/{params}<br>/eth_syncing/{id}/{params}<br>/eth_getFilterChanges/{id}/{params}<br>/eth_getFilterLogs/{id}/{params}<br>/eth_newFilter/{id}/{params}<br>/eth_newBlockFilter/{id}/{params}<br>/eth_uninstallFilter/{id}/{params}<br>/net_listening/{id}/{params}<br>/net_listening/net_peerCount/{id}/{params}<br>/net_version/{id}/{params}<br>/web3_clientVersion/{id}/{params}<br></strong></i>
-        </td>
-    </tr>
-    <tr>
-        <td>Headers</td>
-        <td>keyValue</td>
+        <td>Id</td>
+        <td>text</td>
         <td>no</td>
         <td> - </td>
         <td>Always</td>
         <td>
-            Used when you want to have a custom http header for the request.
+            id
         </td>
     </tr>
     <tr>
-        <td>Query Params</td>
-        <td>keyValue</td>
-        <td>no</td>
-        <td> - </td>
-        <td>Always</td>
-        <td>
-            Used when you want to have a custom query params for the http call.
-        </td>
-    </tr>
-    <tr>
-        <td>Body</td>
+        <td>Params</td>
         <td>json</td>
         <td>no</td>
         <td> - </td>
         <td>Always</td>
         <td>
-            A payload of data can be sent to the server in the body of the request.
+            Params
         </td>
     </tr>
     <tr>
