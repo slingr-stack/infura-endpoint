@@ -139,14 +139,14 @@
     {
       "label": "Id",
       "name": "id",
-      "description": "Id",
+      "description": "Unique ID",
       "type": "text"
     },
     {
       "label": "Params",
       "name": "params",
       "type": "json",
-      "description": "Params",
+      "description": "The params field is a JSON object that varies according to the selected service. Please refer to the documentation for more information",
       "required": "true",
       "options": {
         "allowContextSelector": "true"
