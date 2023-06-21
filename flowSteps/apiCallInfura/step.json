@@ -1,0 +1,251 @@
+{
+  "label": "API call to infura",
+  "name": "apiCallInfura",
+  "category": "integrations",
+  "description": "This flow step will send generic request to infura",
+  "inputs": [
+    {
+      "label": "Method",
+      "name": "method",
+      "description": "The method and path to which this endpoint is to send requests in a generic way.",
+      "type": "urlParams",
+      "required": "true",
+      "options": {
+        "type": "dropDown",
+        "possibleValues": [
+            {
+              "label": "eth_accounts"
+            },
+            {
+              "label": "eth_blockNumber"
+            },
+            {
+              "label": "eth_call"
+            },
+            {
+              "label": "eth_chainId"
+            },
+            {
+              "label": "eth_createAccessList"
+            },
+            {
+              "label": "eth_estimateGas"
+            },
+            {
+              "label": "eth_feeHistory"
+            },
+            {
+              "label": "eth_getBalance"
+            },
+            {
+              "label": "eth_gasPrice"
+            },
+            {
+              "label": "eth_getBlockByHash"
+            },
+            {
+              "label": "eth_getBlockByNumber"
+            },
+            {
+              "label": "eth_getBlockTransactionCountByHash"
+            },
+            {
+              "label": "eth_getBlockTransactionCountByNumber"
+            },
+            {
+              "label": "eth_getCode"
+            },
+            {
+              "label": "eth_getLogs"
+            },
+            {
+              "label": "eth_getStorageAt"
+            },
+            {
+              "label": "eth_getTransactionByBlockHashAndIndex"
+            },
+            {
+              "label": "eth_getTransactionByBlockNumberAndIndex"
+            },
+            {
+              "label": "eth_getTransactionByHash"
+            },
+            {
+              "label": "eth_getTransactionCount"
+            },
+            {
+              "label": "eth_getTransactionReceipt"
+            },
+            {
+              "label": "eth_getUncleByBlockHashAndIndex"
+            },
+            {
+              "label": "eth_getUncleByBlockNumberAndIndex"
+            },
+            {
+              "label": "eth_getUncleCountByBlockHash"
+            },
+            {
+              "label": "eth_getUncleCountByBlockNumber"
+            },
+            {
+              "label": "eth_getWork"
+            },
+            {
+              "label": "eth_mining"
+            },
+            {
+              "label": "eth_hashrate"
+            },
+            {
+              "label": "eth_protocolVersion"
+            },
+            {
+              "label": "eth_syncing"
+            },
+            {
+              "label": "eth_getFilterChanges"
+            },
+            {
+              "label": "eth_getFilterLogs"
+            },
+            {
+              "label": "eth_newFilter"
+            },
+            {
+              "label": "eth_newBlockFilter"
+            },
+            {
+              "label": "eth_uninstallFilter"
+            },
+            {
+              "label": "net_listening"
+            },
+            {
+              "label": "net_listening"
+            },
+            {
+              "label": "net_peerCount"
+            },
+            {
+              "label": "net_version"
+            },
+            {
+              "label": "web3_clientVersion"
+            }
+        ]
+      }
+    },
+    {
+      "label": "Id",
+      "name": "id",
+      "description": "Unique ID",
+      "type": "text"
+    },
+    {
+      "label": "Params",
+      "name": "params",
+      "type": "json",
+      "description": "The params field is a JSON object that varies according to the selected service. Please refer to the documentation for more information",
+      "required": "true",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    },
+    {
+      "label": "Override Settings",
+      "name": "overrideSettings",
+      "type": "boolean",
+      "description": "If true, allows adding configurations",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Follow Redirects",
+      "name": "followRedirects",
+      "type": "boolean",
+      "description": "Follow the redirects when a HTTP request is executed",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Download",
+      "name": "download",
+      "type": "boolean",
+      "description": "Indicates that the resource has to be downloaded into a file instead of returning it in the response.",
+      "visibility": "config.overrideSettings && config.events != \"fileDownloaded\"",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "File Name",
+      "name": "fileName",
+      "description": "If provided, the file will be stored with this name. If empty the file name will be calculated from the URL.",
+      "visibility": "(config.overrideSettings && config.download) || config.events === \"fileDownloaded\"",
+      "type": "text",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    },
+    {
+      "label": "Full Response",
+      "name": "fullResponse",
+      "type": "boolean",
+      "description": "Include extended information about response",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Connection timeout",
+      "name": "connectionTimeout",
+      "description": "Connect timeout interval, in milliseconds (0 = infinity). Default value: 5000 ms (5 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "5000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.connectionTimeout || utils.isPlaceholder(config.connectionTimeout) || utils.getInteger(config.connectionTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Read timeout",
+      "name": "readTimeout",
+      "description": "Read timeout interval, in milliseconds (0 = infinity). Default value: 60000 ms (60 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "60000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.readTimeout || utils.isPlaceholder(config.readTimeout) || utils.getInteger(config.readTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}
